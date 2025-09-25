@@ -1,6 +1,8 @@
 import Image from "next/image";
-
 import { Cpu, Minimize, Zap, ChartPie, Blocks, Rocket, ChevronRight, Globe, Shield, Settings } from "lucide-react"
+import CTA from "@/components/CTA";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 const enterprise_cards = [
   {
@@ -81,9 +83,9 @@ export default function Home() {
     <div className="bg-black w-full px-15">
 
       {/* BACK SCREENS */}
-      <div className=" bg-gradient-to-br from-transparent via-70% via-teal-500/50 to-lime-500 absolute h-[240vh] w-screen top-0 left-0" />
+      <div className=" bg-gradient-to-br from-[#1A1DD8] to-[#07102A] absolute h-[240vh] w-screen top-0 left-0" />
 
-      <div className="bg-gradient-to-b from-transparent to-green-500/40 absolute h-[130vh] w-screen top-[288vh] left-0 overflow-hidden">
+      <div className="bg-gradient-to-b from-transparent to-[#1A1DD8]/80 absolute h-[130vh] w-screen top-[288vh] left-0 overflow-hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
@@ -119,35 +121,12 @@ export default function Home() {
         </svg>
       </div>
 
-      {/* <div className="bg-[#0a0e0e] h-[150vw] w-screen top-[] left-" /> */}
-
-
-
       <div className=" relative z-10">
         {/* NAVBAR */}
-        <div className="relative top-2.5 text-white flex items-center justify-between h-16 w-full ">
+        <Navbar />
 
-          <div>
-            <Image src={"/logo_txt.svg"} width={188} height={100} alt="logo" />
-          </div>
-
-          <div className="flex gap-10 text-sm">
-            <div>Use cases</div>
-            <div>Blog</div>
-            <div>About</div>
-            <div>Contact</div>
-          </div>
-
-          <div className=" w-fit h-fit bg-white px-6 py-2 rounded-lg text-black text-sm font-semibold cursor-pointer">
-            Book a Demo
-          </div>
-
-        </div>
-
-        {/* MAIN PAGE */}
+        {/* HERO CONTENT */}
         <div className="h-screen w-full">
-
-          {/* HERO CONTENT */}
           <div className=" relative   flex flex-row text-white justify-between items-end px-10 mt-20">
 
             {/* TEXT CONTENT */}
@@ -161,29 +140,28 @@ export default function Home() {
                 detect deepfakes, misinformation, fraud, and harmful content at enterprise scale.
               </div>
 
-              <div className="bg-white px-6 py-2 rounded-full text-black text-sm font-semibold cursor-pointer w-fit">
-                Get a demo
+              <div className="bg-orange-500 px-6 py-2 rounded-lg text-white text-base font-semibold cursor-pointer w-fit">
+                Book a Demo
               </div>
             </div>
 
             {/* ILLUSTRATION */}
             <div className="relative w-full h-[550px]">
+              {/* PATTERNS */}
               <div className=" z-10 absolute -left-[7vw] -top-[20vh]  min-h-[60vw] min-w-[60vw] h-full object-contain ">
                 <Image src={"/hero_section_dots.svg"} fill alt="" />
                 <Image src={"/hero_section_dots_blur.svg"} fill alt="" className=" blur rounded-full" />
                 <div className="absolute rounded-full  left-1/3 -translate-x-1/4 top-1/3 -translate-y-1/4 bg-[#D9D9D9]/5 h-2/3 w-2/3 blur-[84.12px]" />
               </div>
 
+              {/* IMAGE */}
               <div className=" relative top-24 left-2 flex flex-col items-center gap-8">
-                {/* <div className=" h-[350px] w-[350px] bg-black"> */}
-                  {/* INSERT IMAGE HERE */}
-                {/* </div> */}
                 <div className=" relative ">
-                  <div className="absolute h-full w-full bg-emerald-900/60 rounded-2xl " />
+                  <div className="absolute h-full w-full bg-blue-900/60 rounded-2xl " />
                   <Image src={'/hero_img.svg'} width={350} height={350} alt="" />
                 </div>
 
-                <div className="font-semibold border border-white backdrop-blur-md p-3 rounded-full w-fit bg-white/5">
+                <div className=" relative z-10 font-semibold border border-white backdrop-blur-md p-3 rounded-full w-fit bg-white/5">
                   Every <span className="underline"> 5 Minutes </span>, a deepfake attempt occurs
                 </div>
               </div>
@@ -191,7 +169,6 @@ export default function Home() {
             </div>
             {/* <div className="h-full w-full bg-yellow-800" /> */}
           </div>
-
         </div>
 
         {/* ENTERPRISE SECTION */}
@@ -325,12 +302,12 @@ export default function Home() {
             From global AI forums to trust & safety summits, Contrails AI is shaping the conversation where it matters most.
           </div>
           {/* images */}
-          <div className="bg-yellow-300/30 w-full h-52 flex flex-row items-center justify-between">
-            <div className="h-30 w-45 bg-yellow-300/20" />
-            <div className="h-30 w-45 bg-yellow-300/20" />
-            <div className="h-30 w-45 bg-yellow-300/20" />
-            <div className="h-30 w-45 bg-yellow-300/20" />
-            <div className="h-30 w-45 bg-yellow-300/20" />
+          <div className=" w-full h-52 flex flex-row items-center justify-between">
+            <Image src={"/conference_logos/marketplace_risk.png"} width={180} height={120} alt="marketplace_risk" />
+            <Image src={"/conference_logos/trust_con.png"} width={180} height={120} alt="marketplace_risk" />
+            <Image src={"/conference_logos/rsac.png"} width={180} height={120} alt="marketplace_risk" />
+            <Image src={"/conference_logos/fosi.png"} width={180} height={120} alt="marketplace_risk" />
+            <Image src={"/conference_logos/ai_risk_summit.png"} width={180} height={120} alt="marketplace_risk" />
           </div>
         </div>
 
@@ -378,104 +355,10 @@ export default function Home() {
         </div>
 
         {/* CTA */}
-        <div className="relative h-screen py-32">
-          {/* SURROUNDINGS  */}
-          <div className=" absolute h-screen w-screen top-0 -left-15 -z-10 overflow-hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              version="1.1"
-              viewBox={`0 0 ${dotsPerRow * dotSpacing} ${dotsPerCol * dotSpacing}`}
-              opacity="1"
-              className="w-full h-full"
-              preserveAspectRatio="xMidYMid slice"
-            >
-              <defs>
-                <pattern
-                  id="dotPattern"
-                  x="0"
-                  y="0"
-                  width={dotSpacing}
-                  height={dotSpacing}
-                  patternUnits="userSpaceOnUse"
-                >
-                  <circle
-                    r="2"
-                    cx={dotSpacing / 2}
-                    cy={dotSpacing / 2}
-                    fill="white"
-                    stroke="white"
-                  />
-                </pattern>
-              </defs>
-
-              <rect
-                width="100%"
-                height="100%"
-                fill="url(#dotPattern)"
-              />
-            </svg>
-          </div>
-
-          <div className="relative z-10 text-white bg-black h-full p-15 flex flex-col items-start justify-center ">
-
-            <div className="text-[68px] leading-19 text-pretty">
-              Talk to us and discover the fastest <br /> path to trusted content moderation.
-            </div>
-
-            <div className="text-white bg-lime-700 min-w-56 w-fit py-2 px-6 flex items-center justify-between gap-4 rounded-lg mt-16">
-              <span className="text-xl">
-                Book a Demo
-              </span>
-              <ChevronRight />
-            </div>
-          </div>
-        </div>
+        <CTA />
 
         {/* FOOTER */}
-        <div className=" mb-40 text-white">
-          <div className="bg-linear-to-tr from-emerald-950 to-lime-700 bg-clip-text text-[15.5rem] leading-65 font-bold text-transparent" >
-            Contrails AI
-          </div>
-
-          <div className=" relative -left-10 text-white border border-white flex items-center justify-between px-10 rounded-full h-20 w-[97vw] mb-20">
-            <span>
-              <Image src={"./logo.svg"} width={31} height={31} alt="logo" />
-            </span>
-
-            <div className="flex gap-8">
-              <div>Use cases</div>
-              <div>Blog</div>
-              <div>About</div>
-              <div>Contact</div>
-              <div>Privacy Policy</div>
-              <div>Terms & conditions</div>
-            </div>
-          </div>
-
-          <div className="flex w-full justify-between">
-            <span className="text-sm">© {new Date().getFullYear()} Contrails AI. All rights reserved.</span>
-            <div className="flex items-center gap-5">
-              {/* Twitter */}
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clipPath="url(#clip0_237_933)">
-                  <path d="M14.1596 0.839844H16.9196L10.8596 8.05387L17.9396 17.8398H12.3836L8.03359 11.893L3.05359 17.8398H0.293594L6.71359 10.124L-0.0664062 0.839844H5.62759L9.55759 6.27232L14.1596 0.839844ZM13.1936 16.1461H14.7236L4.82359 2.47084H3.17959L13.1936 16.1461Z" fill="white" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_237_933">
-                    <rect width="18" height="17" fill="white" transform="translate(0 0.839844)" />
-                  </clipPath>
-                </defs>
-              </svg>
-
-              {/* LINKEDIN */}
-              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fillRule="evenodd" clipRule="evenodd" d="M21 21.3398H17.3016V15.0406C17.3016 13.3135 16.6453 12.3483 15.2783 12.3483C13.7912 12.3483 13.0143 13.3527 13.0143 15.0406V21.3398H9.45V9.33984H13.0143V10.9562C13.0143 10.9562 14.0859 8.97323 16.6324 8.97323C19.1777 8.97323 21 10.5275 21 13.7422V21.3398ZM5.19785 7.76854C3.98379 7.76854 3 6.77703 3 5.55419C3 4.33135 3.98379 3.33984 5.19785 3.33984C6.41191 3.33984 7.39512 4.33135 7.39512 5.55419C7.39512 6.77703 6.41191 7.76854 5.19785 7.76854ZM3.35742 21.3398H7.07402V9.33984H3.35742V21.3398Z" fill="white" />
-              </svg>
-
-            </div>
-          </div>
-
-        </div>
+        <Footer />
 
       </div>
     </div>
