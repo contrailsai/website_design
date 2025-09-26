@@ -7,9 +7,9 @@ const CTA = () => {
     const dotsPerCol = 70; // More dots vertically
 
     return (
-        <div className="relative h-screen py-32">
+        <div className="relative md:h-screen py-10 md:py-32 px-5">
             {/* SURROUNDINGS  */}
-            <div className=" absolute h-screen w-screen top-0 -left-15 -z-10 overflow-hidden">
+            <div className=" absolute h-[70vh] md:h-screen w-screen top-0 left-0 md:-left-15 -z-10 overflow-hidden">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     version="1.1"
@@ -45,10 +45,10 @@ const CTA = () => {
                 </svg>
             </div>
 
-            <div className="relative z-10 text-white bg-black h-full p-15 flex flex-col items-start justify-center ">
+            <div className=" relative z-10 text-white bg-black h-full px-10 md:px-15 py-5 md:py-15 flex flex-col items-start justify-center ">
 
-                <div className="text-[68px] leading-19 text-pretty">
-                    Talk to us and discover the fastest <br /> path to trusted content moderation.
+                <div className=" text-4xl md:text-[68px] md:leading-19 text-pretty">
+                    Talk to us and discover the fastest <br className="hidden md:block" /> path to trusted content moderation.
                 </div>
 
                 <Link href={"https://cal.com/ami-contrails/30min"} target="_blank" className="text-white bg-orange-400 min-w-56 w-fit py-2 px-6 flex items-center justify-between gap-4 rounded-lg mt-16">
