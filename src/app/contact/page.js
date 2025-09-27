@@ -3,12 +3,12 @@ import Footer from "@/components/Footer";
 
 const page = () => {
     return (
-        <div className=" bg-gradient-to-b from-blue-800 to-black/20  px-15">
+        <div className=" bg-gradient-to-b from-blue-800 to-black/20  md:px-15">
             <Navbar />
 
             {/* HERO SECTION */}
-            <div className="text-white min-h-[40vh] flex flex-col justify-end px-10 mb-20">
-                <div className="text-[80px]" >
+            <div className="text-white min-h-[20vh] md:min-h-[40vh] flex flex-col justify-end px-10 mb-20">
+                <div className=" text-5xl md:text-[80px]" >
                     Get in Touch
                 </div>
                 <div className="font-thin text-sm">
@@ -17,13 +17,13 @@ const page = () => {
             </div>
 
             {/* CONTACT US*/}
-            <div className="bg-white min-h-[95vh] rounded-3xl px-10 py-10 flex gap-10 mb-16">
+            <div className="bg-white min-h-[95vh] rounded-3xl mx-4 px-4 md:px-10 py-10 flex flex-col md:flex-row gap-10 mb-16">
                 {/* FORM */}
                 <div className="w-full flex flex-col gap-8">
-                    <div className="text-4xl">
+                    <div className=" text-3xl md:text-4xl">
                         How can we assist you today?
                     </div>
-                    <div className="flex flex-col gap-5 pr-18">
+                    <div className="flex flex-col gap-5 md:pr-18">
                         <div className="flex flex-col gap-2">
                             <label>Full Name</label>
                             <input className=" px-3 py-2 rounded-lg border border-gray-400 " placeholder="Enter Full Name" />
@@ -50,9 +50,9 @@ const page = () => {
 
                 {/* CONTACT INFO */}
                 <div className="w-full flex items-center justify-center ">
-                    <div className=" px-10 py-12 shadow-sm border border-gray-300 rounded-3xl bg-orange-100 max-w-[460px] max-h-[520px]  h-full w-full flex flex-col gap-12">
+                    <div className=" px-5 md:px-10 py-12 shadow-sm border border-gray-300 rounded-3xl bg-orange-100 max-w-[460px] max-h-[520px]  h-full w-full flex flex-col gap-12">
 
-                        <div className="text-4xl" >Contact</div>
+                        <div className=" text-3xl md:text-4xl" >Contact</div>
 
                         <div>
                             <div className="font-bold text-xl">Phone</div>
