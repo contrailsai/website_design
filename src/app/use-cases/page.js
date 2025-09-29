@@ -116,7 +116,7 @@ const FeatureCard = ({ title, icon: Icon, items, index }) => {
     );
 };
 
-export const page = () => {
+export const Page = () => {
     const [activeTab, setActiveTab] = useState(0);
     const tabs = ['Marketplace', 'Online Communities', 'Brand Platforms', 'Media and Publishing Houses'];
 
@@ -619,4 +619,4 @@ export const page = () => {
     )
 }
 
-export default page;
+export default Page;
