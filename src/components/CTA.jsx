@@ -57,21 +57,22 @@ const AnimatedCTA = () => {
     return (
         <div ref={ctaRef} className="relative md:h-screen py-10 md:py-32 px-5">
             {/* ANIMATED DOT PATTERN BACKGROUND */}
-            <div className="absolute h-[70vh] md:h-screen w-screen top-0 left-0 md:-left-15 -z-10 overflow-hidden">
+            <div className="absolute h-[70vh] md:h-screen w-screen top-0 left-0 md:-left-15 overflow-hidden">
+                <div className=' absolute bg-black h-full w-full bg-red-90 -z-20' />
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     version="1.1"
                     viewBox={`0 0 ${dotsPerRow * dotSpacing} ${dotsPerCol * dotSpacing}`}
-                    opacity="1"
-                    className="w-full h-full"
+                    opacity="0.3"
+                    className="w-full h-full relative  "
                     preserveAspectRatio="xMidYMid slice"
                 >
                     <defs>
                         {/* Gradient for dots */}
-                        <radialGradient id="dotGradient">
+                        {/* <radialGradient id="dotGradient">
                             <stop offset="0%" stopColor="rgba(255, 255, 255, 1)" />
                             <stop offset="100%" stopColor="rgba(255, 255, 255, 0.7)" />
-                        </radialGradient>
+                        </radialGradient> */}
 
                         <pattern
                             id="dotPattern"
@@ -85,17 +86,8 @@ const AnimatedCTA = () => {
                                 r="2"
                                 cx={dotSpacing / 2}
                                 cy={dotSpacing / 2}
-                                fill="url(#dotGradient)"
-                                initial={{ scale: 0.8, opacity: 0.2 }}
-                                animate={{
-                                    scale: [0.8, 1.2, 0.8],
-                                    opacity: [0.2, 0.3, 0.2]
-                                }}
-                                transition={{
-                                    duration: 3,
-                                    repeat: Infinity,
-                                    ease: "easeInOut"
-                                }}
+                                fill={"white"}
+                                // fill="url(#dotGradient)"
                             />
                         </pattern>
                     </defs>
@@ -105,19 +97,6 @@ const AnimatedCTA = () => {
                         fill="url(#dotPattern)"
                     />
                 </svg>
-
-                {/* Animated gradient overlay */}
-                <motion.div
-                    className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10"
-                    animate={{
-                        opacity: [0.3, 0.5, 0.3]
-                    }}
-                    transition={{
-                        duration: 4,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                    }}
-                />
             </div>
 
             {/* MAIN CONTENT */}
@@ -158,7 +137,7 @@ const AnimatedCTA = () => {
                     //     boxShadow: "0 20px 40px rgba(251, 146, 60, 0.3)"
                     // }}
                     whileTap={{ scale: 0.98 }}
-                    className="text-white bg-orange-400 min-w-56 w-fit py-2 px-6 flex items-center justify-between gap-4 rounded-lg mt-16 cursor-pointer relative overflow-hidden group"
+                    className="text-white bg-orange-400 min-w-56 min-h-10 w-fit py-2 px-6 flex items-center justify-between gap-4 rounded-lg mt-16 cursor-pointer relative overflow-hidden group"
                 >
                     <span className="text-xl relative z-10">
                         Book a Demo

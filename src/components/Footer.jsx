@@ -4,7 +4,7 @@ import Link from "next/link";
 const Footer = () => {
     return (
         <div className=" mb-40 flex flex-col items-center text-white">
-            <div className="bg-linear-to-tr from-[#12193A] to-[#092364] bg-clip-text text-center text-[3.7rem] md:text-[15.5rem] md:leading-65 font-bold text-transparent" >
+            <div className="bg-linear-to-tr from-[#121939]/10 tto-[#DF6501] to-[#092570] bg-clip-text text-center text-[3.7rem] md:text-[16vw] md:leading-[20vw] font-bold text-transparent" >
                 Contrails AI
             </div>
 
