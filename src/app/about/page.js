@@ -235,7 +235,7 @@ const Page = () => {
                         </p>
 
                         <div className="mt-8 text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto text-balance">
-                            At Contrails, we believe safety is not optional—it's by design. <br /> Our culture blends innovation with responsibility.
+                            At Contrails, we believe safety is not optional—it&apos;s by design. <br /> Our culture blends innovation with responsibility.
                         </div>
                     </div>
 
