@@ -13,7 +13,7 @@ const Navbar = () => {
 
     const navLinks = [
         { href: "/use-cases", label: "Use cases" },
-        { href: "/blog", label: "Blog" },
+        { href: "/blogs", label: "Blog" },
         { href: "/about", label: "About" },
         { href: "/contact", label: "Contact" },
     ];

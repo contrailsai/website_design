@@ -10,13 +10,13 @@ const Footer = () => {
 
             <div className=" relative text-white border border-white flex gap-10 md:gap-0 flex-col md:flex-row md:items-center justify-between px-10 py-10 md:py-0 rounded-3xl md:rounded-full h-full md:h-20 w-[97vw] mb-20 ">
                 <span>
-                    <Image src={"./logo.svg"} width={31} height={31} alt="logo" />
+                    <Image src={"/logo.svg"} width={31} height={31} alt="logo" />
                 </span>
 
                 <div className="flex flex-col md:flex-row gap-4 md:gap-8">
 
                     <Link className=" cursor-pointer hover:text-gray-100 " href={"/use-cases"}>Use cases</Link>
-                    <Link className=" cursor-pointer hover:text-gray-100 " href={"/blog"}>Blog</Link>
+                    <Link className=" cursor-pointer hover:text-gray-100 " href={"/blogs"}>Blog</Link>
                     <Link className=" cursor-pointer hover:text-gray-100 " href={"/about"}>About</Link>
                     <Link className=" cursor-pointer hover:text-gray-100 " href={"/contact"}>Contact</Link>
                     
