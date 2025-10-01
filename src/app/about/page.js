@@ -48,7 +48,8 @@ const Page = () => {
                         About us
                     </motion.div>
                     <motion.div className="font-thin text-sm" variants={fadeInUp}>
-                        From solving GenAI content moderation problems to exploring our <br /> solutions, our team is here to help you.
+                        With backgrounds across policy, content moderation, and AI, <br /> we bridge strategy and technology.
+                        {/* From solving GenAI content moderation problems to exploring our <br /> solutions, our team is here to help you. */}
                     </motion.div>
                 </motion.div>
 
@@ -74,11 +75,11 @@ const Page = () => {
                                 </div>
 
                                 <p className="text-lg sm:text-xl leading-relaxed text-gray-700 mb-4">
-                                    Contrails.ai is an AI-native Trust & Safety company dedicated to making the internet safer. We build cutting-edge deepfake detection tools, misinformation defense systems, and smart content moderation solutions that empower platforms, enterprises, and governments to safeguard digital spaces at scale.
+                                    Contrails AI is an AI-native Trust & Safety company dedicated to making the internet safer. We build cutting-edge deepfake detection tools, misinformation defense systems, and smart content moderation solutions that empower platforms, enterprises, and governments to safeguard digital spaces at scale.
                                 </p>
 
                                 <p className="text-lg sm:text-xl leading-relaxed text-gray-700">
-                                    From protecting global newsrooms against disinformation to shielding Fortune 500 executives from synthetic impersonations, Contrails has become a trusted partner in AI-driven safety, compliance, and authenticity verification.
+                                    From protecting global newsrooms against disinformation to shielding Fortune 500 executives from synthetic impersonations, Contrails AI has become a trusted partner in AI-driven safety, compliance, and authenticity verification.
                                 </p>
                             </div>
 
@@ -126,7 +127,7 @@ const Page = () => {
                                     </h2>
                                 </div>
 
-                                <p className="text-lg sm:text-xl lg:text-2xl leading-relaxed text-gray-700 text-balance">
+                                <p className="text-lg sm:text-xl leading-relaxed text-gray-700 text-balance">
                                     A digital world where truth, safety, and trust are foundational—where enterprises, governments, and everyday users can thrive without the risks posed by AI-generated manipulation, fraud, or malicious content.
                                 </p>
                             </div>
@@ -175,7 +176,7 @@ const Page = () => {
                                     </h2>
                                 </div>
 
-                                <p className="text-lg sm:text-xl lg:text-2xl leading-relaxed text-gray-700 text-balance">
+                                <p className="text-lg sm:text-xl leading-relaxed text-gray-700 text-balance">
                                     To create a safer, more trustworthy internet by equipping platforms and communities with next-generation detection technology that identifies harmful synthetic media, misinformation, and online threats in real-time.
                                 </p>
                             </div>
@@ -232,11 +233,11 @@ const Page = () => {
                             </div>
 
                             <p className="text-lg sm:text-xl leading-relaxed text-gray-700 max-w-4xl mx-auto text-balance">
-                                Contrails is led by AI researchers, trust & safety experts, policy leaders, and human rights advocates with decades of experience in online safety. Our team has worked on some of the most pressing challenges of the internet age—from combating misinformation to pioneering safety-by-design frameworks adopted worldwide.
+                                Contrails AI is led by AI researchers, trust & safety experts, policy leaders, and human rights advocates with decades of experience in online safety. Our team has worked on some of the most pressing challenges of the internet age—from combating misinformation to pioneering safety-by-design frameworks adopted worldwide.
                             </p>
 
                             <div className="mt-8 text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto text-balance">
-                                At Contrails, we believe safety is not optional—it&apos;s by design. <br /> Our culture blends innovation with responsibility.
+                                At Contrails AI, we believe safety is not optional—it&apos;s by design. <br /> Our culture blends innovation with responsibility.
                             </div>
                         </div>
 

@@ -132,7 +132,7 @@ export const Page = () => {
             ]
         },
         {
-            title: 'Travel and hospitality Platforms',
+            title: 'Travel and hospitality platforms',
             icon: Plane,
             items: [
                 'Prevent fake rental or booking listings powered by AI',

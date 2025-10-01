@@ -12,7 +12,7 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navLinks = [
-        { href: "/use-cases", label: "Use cases" },
+        { href: "/use-cases", label: "Use Cases" },
         { href: "/blogs", label: "Blog" },
         { href: "/about", label: "About" },
         { href: "/contact", label: "Contact" },
@@ -27,7 +27,7 @@ const Navbar = () => {
             transition: { duration: 0.4, ease: "easeInOut" },
         },
     };
-    
+
     // Stagger container for desktop nav
     const navContainerVariants = {
         hidden: {},
@@ -52,10 +52,10 @@ const Navbar = () => {
         visible: { opacity: 1 },
         exit: { opacity: 0 },
     };
-    
+
     return (
         <>
-            <motion.div 
+            <motion.div
                 className="relative z-30 top-2.5 text-white flex items-center justify-between h-16 w-full p-2"
                 variants={navContainerVariants}
                 initial="hidden"
@@ -76,8 +76,8 @@ const Navbar = () => {
                 </motion.div>
 
                 {/* Desktop Navigation Links */}
-                <motion.div 
-                    className="hidden md:flex gap-10 text-sm z-20 relative" 
+                <motion.div
+                    className="hidden md:flex gap-10 text-sm z-20 relative"
                     variants={navContainerVariants}
                 >
                     {navLinks.map((link) => (
@@ -90,11 +90,18 @@ const Navbar = () => {
                 </motion.div>
 
                 {/* Book a Demo Button */}
-                <motion.div variants={navItemVariants}>
+                <motion.div
+                    variants={navItemVariants}
+                    className="bg-orange-500 w-fit px-4 py-2 text-xl rounded-lg text-white font-semibold cursor-pointer flex "
+                    // variants={fadeInUp}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    type="submit"
+                >
                     <Link
                         href={"https://cal.com/ami-contrails/30min"}
                         target="_blank"
-                        className="w-fit h-fit bg-white px-3 md:px-6 py-2 rounded-lg text-black text-sm font-semibold cursor-pointer"
+                        className="w-fit h-fit text-white rounded-lg text-sm font-semibold cursor-pointer "
                     >
                         Book a Demo
                     </Link>
@@ -125,15 +132,15 @@ const Navbar = () => {
                                     <X size={28} />
                                 </button>
                             </div>
-                            
-                            <motion.div 
+
+                            <motion.div
                                 className="flex flex-col items-center gap-8 text-lg"
                                 // Stagger children for a nice reveal effect
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.2 } }}
                             >
                                 {navLinks.map((link) => (
-                                    <motion.div 
+                                    <motion.div
                                         key={link.href}
                                         // Individual item animation
                                         initial={{ opacity: 0, y: 20 }}

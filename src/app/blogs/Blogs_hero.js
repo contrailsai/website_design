@@ -39,7 +39,8 @@ const Blogs_hero = () => {
                     Blogs
                 </motion.div>
                 <motion.div className="font-thin text-sm" variants={fadeInUp}>
-                    From solving GenAI content moderation problems to exploring our <br /> solutions, our team is here to help you.
+                    Get the latest insights on AI-powered detection, moderation, and compliance, <br/> built for modern digital communities.
+                    {/* From solving GenAI content moderation problems to exploring our <br /> solutions, our team is here to help you. */}
                 </motion.div>
             </motion.div >
         </>

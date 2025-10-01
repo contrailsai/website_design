@@ -38,7 +38,7 @@ const enterprise_cards = [
   },
   {
     title: "Brand Protection",
-    description: "keep customer support intact",
+    description: "Keep customer support intact",
   },
   {
     title: "Harmful Content Labeling",
@@ -138,7 +138,7 @@ export default function Home() {
                     className=" text-base leading-7 text-left font-light max-w-md"
                     variants={fadeIn}
                   >
-                    detect deepfakes, misinformation, fraud, and harmful content at
+                    Detect deepfakes, misinformation, fraud, and harmful content at
                     enterprise scale.
                   </motion.div>
 
@@ -441,7 +441,7 @@ export default function Home() {
               className=" text-3xl/relaxed md:text-5xl/normal text-balance  "
               variants={fadeIn}
             >
-              From global AI forums to trust & safety summits, Contrails AI is
+              From global AI forums to Trust & Safety summits, Contrails AI is
               shaping the conversation where it matters most.
             </motion.div>
             {/* images */}
@@ -526,10 +526,10 @@ export default function Home() {
                   {" "}
                   Safeguard Your Digital Content with Enterprise- Grade AI Safety{" "}
                 </div>
-                <div className="md:w-2/3 text-sm/relaxed">
+                {/* <div className="md:w-2/3 text-sm/relaxed">
                   Talk to us and discover the fastest path to trusted content
                   moderation.
-                </div>
+                </div> */}
               </motion.div>
 
               <motion.div
@@ -555,7 +555,7 @@ export default function Home() {
                   variants={fadeIn}
                 >
                   <div className=" text-xl md:text-3xl">
-                    Enterprise <br className="hidden md:block" /> security
+                    Enterprise <br className="hidden md:block" /> Security
                   </div>
                   <div className="text-xl font-thin">
                     SOC2 certified with bank grade encryption
@@ -566,7 +566,7 @@ export default function Home() {
                   variants={fadeIn}
                 >
                   <div className=" text-xl md:text-3xl">
-                    24/7 expert <br className="hidden md:block" /> support
+                    24/7 Expert <br className="hidden md:block" /> Support
                   </div>
                   <div className="text-xl font-thin">
                     Dedicated team for enterprise customers
