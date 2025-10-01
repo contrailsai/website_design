@@ -56,47 +56,8 @@ const AnimatedCTA = () => {
 
     return (
         <div ref={ctaRef} className="relative md:h-screen py-10 md:py-32 px-5">
-            {/* ANIMATED DOT PATTERN BACKGROUND */}
-            <div className="absolute h-[70vh] md:h-screen w-screen top-0 left-0 md:-left-15 overflow-hidden">
-                <div className=' absolute bg-black h-full w-full bg-red-90 -z-20' />
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    version="1.1"
-                    viewBox={`0 0 ${dotsPerRow * dotSpacing} ${dotsPerCol * dotSpacing}`}
-                    opacity="0.3"
-                    className="w-full h-full relative  "
-                    preserveAspectRatio="xMidYMid slice"
-                >
-                    <defs>
-                        {/* Gradient for dots */}
-                        {/* <radialGradient id="dotGradient">
-                            <stop offset="0%" stopColor="rgba(255, 255, 255, 1)" />
-                            <stop offset="100%" stopColor="rgba(255, 255, 255, 0.7)" />
-                        </radialGradient> */}
-
-                        <pattern
-                            id="dotPattern"
-                            x="0"
-                            y="0"
-                            width={dotSpacing}
-                            height={dotSpacing}
-                            patternUnits="userSpaceOnUse"
-                        >
-                            <motion.circle
-                                r="2"
-                                cx={dotSpacing / 2}
-                                cy={dotSpacing / 2}
-                                fill={"white"}
-                                // fill="url(#dotGradient)"
-                            />
-                        </pattern>
-                    </defs>
-                    <rect
-                        width="100%"
-                        height="100%"
-                        fill="url(#dotPattern)"
-                    />
-                </svg>
+            <div className=' absolute top-0 left-0 bg-white  bg-[url(/30.svg)] bg- w-full h-full '> 
+                <div className=' bg-black/70 w-full h-full backdrop-invert '></div>
             </div>
 
             {/* MAIN CONTENT */}
@@ -137,9 +98,9 @@ const AnimatedCTA = () => {
                     //     boxShadow: "0 20px 40px rgba(251, 146, 60, 0.3)"
                     // }}
                     whileTap={{ scale: 0.98 }}
-                    className="text-white bg-orange-400 min-w-56 min-h-10 w-fit py-2 px-6 flex items-center justify-between gap-4 rounded-lg mt-16 cursor-pointer relative overflow-hidden group"
+                    className="text-white bg-[#DF6501] min-w-56 min-h-10 w-fit py-2 px-6 flex items-center justify-between gap-4 rounded-lg mt-16 cursor-pointer relative overflow-hidden group"
                 >
-                    <span className="text-xl relative z-10">
+                    <span className="text-xl z-10">
                         Book a Demo
                     </span>
 
