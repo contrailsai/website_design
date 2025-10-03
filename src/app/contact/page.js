@@ -107,10 +107,10 @@ MESSAGE: ${message},\n
             <div className=" bg-gradient-to-b from-blue-800 to-black/20 md:px-15 overflow-x-hidden">
                 <Navbar />
 
-                <div className=" flex pt-20 justify-between items-start ">
+                <div className=" flex flex-col md:flex-row pt-20 justify-between items-start ">
                     {/* HERO SECTION */}
                     <motion.div
-                        className="text-white w-full min-h-[20vh] md:min-h-[40vh] flex flex-col justify-end px-10 mb-20"
+                        className="text-white w-full min-h-[20vh] md:min-h-[40vh] flex flex-col justify-end px-5 md:px-10 mb-20"
                         initial="hidden"
                         animate="visible"
                         variants={staggerContainer}
@@ -125,7 +125,7 @@ MESSAGE: ${message},\n
 
                     {/* CONTACT US*/}
                     <motion.div
-                        className=" w-full min-h-[95vh]  mx-4  flex flex-col md:flex-row items-center justify-center gap-10 mb-16"
+                        className=" w-full min-h-[95vh]  md:mx-4  flex flex-col md:flex-row items-center justify-center gap-10 mb-16"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
