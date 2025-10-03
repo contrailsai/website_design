@@ -1,6 +1,7 @@
 import { Space_Grotesk } from "next/font/google";
 import Script from 'next/script';
 import "./globals.css";
+import { Suspense } from 'react';
 
 import Analytics from "@/components/Analytics";
 
@@ -100,7 +101,9 @@ export default function RootLayout({ children }) {
         className={` bg-black ${spaceGrotesk.className} antialiased`}
       >
         {children}
-        <Analytics />
+        <Suspense fallback={null}>
+          <Analytics />
+        </Suspense>
       </body>
     </html>
   );

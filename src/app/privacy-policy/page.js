@@ -3,6 +3,7 @@ const Page = ()=>{
 
     return (
         <>
+        PRIVACY POLICY
         </>
     )
 }
