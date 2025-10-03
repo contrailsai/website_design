@@ -8,11 +8,19 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Use Cases -->
+  <url>
+    <loc>https://contrails.ai/use-cases</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
    <!-- Blog -->
   <url>
     <loc>https://contrails.ai/blogs</loc>
     <lastmod>2025-05-20</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
@@ -23,20 +31,21 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://contrails.ai/contact</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
   
   <!-- Privacy Policy -->
-  <url>
+  <!-- <url>
     <loc>https://contrails.ai/privacy-policy</loc>
     <lastmod>2025-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
+  </url> -->
   
-  <!-- Terms & Conditions -->
-  <url>
-    <loc>https://contrails.ai/terms-n-conditions</loc>
-    <lastmod>2025-05-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
 </urlset> 

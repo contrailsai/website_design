@@ -80,7 +80,7 @@ const numbers_section = [
 const features = [
   {
     icon: <Cpu className=" stroke-[#DF6501] " />,
-    title: "Multi Modal Detection",
+    title: "Multi-Modal Detection",
   },
   {
     icon: <Minimize className=" stroke-[#DF6501] " />,
@@ -88,7 +88,7 @@ const features = [
   },
   {
     icon: <Zap className=" stroke-[#DF6501] fill-[#DF6501]" />,
-    title: "Lightning Fast Results",
+    title: "Lightning-Fast Results",
   },
   {
     icon: <ChartPie className=" stroke-[#DF6501] " />,
@@ -107,28 +107,28 @@ const dotsPerCol = 70; // More dots vertically
 export default function Home() {
   return (
     <>
-      <div className="bg-black w-full md:px-15 overflow-x-hidden"> {/* Added overflow-x-hidden to prevent horizontal scroll during animations */}
+      <div className="bg-black w-full lg:px-15 overflow-x-hidden"> {/* Added overflow-x-hidden to prevent horizontal scroll during animations */}
 
         <div className=" relative z-10">
           {/* NAVBAR */}
 
           <div className=" relative">
 
-            <div className=" bg-gradient-to-br from-[#1A1DD8] to-[#07102A] absolute h-[185vh] md:h-full w-screen  -left-15 -z-10" />
+            <div className=" bg-gradient-to-br from-[#1A1DD8] to-[#07102A] absolute h-[185vh] lg:h-full w-screen lg:-left-15 -z-10" />
             <Navbar />
 
             {/* HERO CONTENT */}
             <div className="h-screen w-full">
-              <div className=" relative flex flex-col md:flex-row text-white justify-between items-end px-3 md:px-10 mt-6 md:mt-20">
+              <div className=" relative flex flex-col lg:flex-row text-white justify-between items-start lg:items-end px-3 lg:px-10 mt-6 lg:mt-20">
                 {/* TEXT CONTENT */}
                 <motion.div
-                  className="relative md:top-16 flex flex-col gap-6 md:text-4xl text-center md:max-w-[40vw]"
+                  className="relative lg:top-16 flex flex-col gap-6 lg:text-4xl text-center lg:max-w-[40vw] z-30"
                   initial="hidden"
                   animate="visible"
                   variants={staggerContainer}
                 >
                   <motion.div
-                    className=" text-4xl md:text-[80px] md:leading-[80px] max-w-[80vw] md:max-w-[100vw] text-left text-pretty "
+                    className="  text-[5vw] lg:text-[80px] lg:leading-[80px] max-w-[80vw] lg:max-w-[100vw] text-left text-pretty "
                     variants={fadeIn}
                   >
                     GenAI Content Governance and Intelligence Across
@@ -149,9 +149,9 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                     whileTap={{ scale: 0.98 }}
-                    className="text-white bg-[#DF6501] min-w-56 min-h-10 w-fit py-2 px-6 flex items-center justify-between gap-4 rounded-lg cursor-pointer relative overflow-hidden group"
+                    className="text-white bg-[#DF6501] lg:min-w-56 min-h-10 w-fit py-2 px-4 lg:px-6 flex items-center justify-between gap-4 rounded-lg cursor-pointer relative overflow-hidden group"
                   >
-                    <span className="text-xl z-10">
+                    <span className="lg:text-xl z-10">
                       Book a Demo
                     </span>
 
@@ -172,15 +172,15 @@ export default function Home() {
 
                 {/* ILLUSTRATION */}
                 <motion.div
-                  className="relative w-full h-[550px]"
+                  className="relative top-16 lg:-top-10 w-full h-[360px] lg:h-[550px] lg:-right-[4vw] flex items-center justify-center"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
                   {/* PATTERNS */}
-                  <div className=" z-20 absolute -left-[5vw] -top-[27vh] min-h-[100vh] min-w-[100vw] md:-left-[7vw] md:-top-[20vh] md:min-h-[60vw] md:min-w-[60vw] md:h-full object-contain ">
-                    <Image src={"/hero_section_dots.svg"} fill alt="" />
-                    <div className="relative rounded-full h-[54.71vh] md:h-full top-[22.57vh] md:top-0 overflow-hidden blur-xs md:blur">
+                  <div className="  z-20 absolute w-full lg:min-h-[60vw] lg:min-w-[60vw] xl:-top-24 lg:h-full object-contain ">
+                    <Image src={"/hero_section_dots.svg"} fill alt="" className=" " />
+                    <div className="relative rounded-full h-[50vh] lg:h-full overflow-hidden blur-xs lg:blur">
                       <Image
                         src={"/hero_section_dots_blur.svg"}
                         fill
@@ -188,20 +188,20 @@ export default function Home() {
                         className=""
                       />
                     </div>
-                    <div className="absolute rounded-full left-1/3 -translate-x-1/4 top-1/3 -translate-y-1/4 bg-[#D9D9D9]/5 h-2/3 w-2/3 blur-[84.12px]" />
+                    {/* <div className="absolute rounded-full left-1/3 -translate-x-1/4 top-1/3 -translate-y-1/4 bg-[#D9D9D9]/5 h-2/3 w-2/3 blur-[84.12px]" /> */}
                   </div>
 
                   {/* IMAGE */}
-                  <div className=" relative top-24 left-2 flex flex-col items-center gap-8">
-                    <div className=" rounded-xl overflow-hidden relative w-[12.15vw] h-[22.94vh] md:w-[24.3vw] md:h-[45.62vh] flex justify-center items-center">
-                      <div className="absolute h-full w-full bg-blue-900/60 rounded-xl z-10" />\
-                      <div className="h-full w-full aspect-[6/5] relative -top-42 ">
+                  <div className=" relative lg:top-[5.5vw] flex flex-col items-center gap-8">
+                    <div className=" rounded-xl overflow-hidden relative w-[40vw] lg:w-[25vw] aspect-[6/5]  lg:aspect-[12/11] flex justify-center items-center">
+                      <div className="absolute  h-full w-full aspect-[6/5] bg-blue-900/60 rounded-xl z-10" />
+                      <div className=" h-full w-full aspect-[6/5] relative -top-[16vw] lg:-top-[10vw]  ">
                         <Image src={"/hero_image.gif"} width={420} height={350} alt="" className="" />
                       </div>
                     </div>
 
-                    <div className=" text-xs md:text-base relative z-10 font-semibold border border-white backdrop-blur-md p-1 md:p-3 rounded-full w-fit bg-white/5">
-                      Every <span className=""> 5 Minutes </span>, a
+                    <div className=" text-xs lg:text-base relative z-20 font-semibold border border-white backdrop-blur-md p-1 lg:p-3 rounded-full w-fit bg-white/5">
+                      Every <span className=""> 5 minutes</span>, a
                       deepfake attempt occurs
                     </div>
                   </div>
@@ -211,14 +211,14 @@ export default function Home() {
 
             {/* ENTERPRISE SECTION */}
             <motion.div
-              className=" flex md:flex-wrap gap-[1px] pb-36 md:pb-20 pt-10 overflow-scroll px-6 md:px-0 scroll-smooth scrollbar-hide"
+              className=" flex lg:flex-wrap gap-[1px] pb-36 lg:pb-20 pt-10 overflow-scroll px-6 lg:px-0 scroll-smooth scrollbar-hide"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={staggerContainer}
             >
               <motion.div
-                className="bg-white min-h-96 min-w-[285px] md:min-w-[22.7vw] w-0 px-10 p-10 flex flex-col justify-between rounded-3xl"
+                className="bg-white min-h-96 min-w-[300px] lg:w-[22.7vw] px-10 p-10 flex flex-col justify-between rounded-3xl"
                 variants={fadeIn}
               >
                 <div className="text-[36px] leading-10">
@@ -232,12 +232,12 @@ export default function Home() {
               {enterprise_cards.map((card, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white/90 min-h-96 min-w-[300px] md:w-[22.7vw] px-10 p-10 flex flex-col justify-between rounded-3xl"
+                  className="bg-white/90 min-h-96 min-w-[300px] lg:w-[22.7vw] px-10 p-10 flex flex-col justify-between rounded-3xl"
                   variants={fadeIn}
                 >
                   <div className="flex items-start gap-3">
                     <div className="bg-[#FF7300] rounded-full size-3 mt-1.5" />
-                    <div className=" md:text-lg font-bold tracking-wider">
+                    <div className=" lg:text-lg font-bold tracking-wider">
                       {card.title}
                     </div>
                   </div>
@@ -246,12 +246,12 @@ export default function Home() {
               ))}
 
               <motion.div
-                className="bg-transparent text-white min-h-96 min-w-[285px] md:min-w-[22.7vw] w-0 px-10 p-10 flex flex-col justify-end rounded-3xl"
+                className="bg-transparent text-white min-h-96 min-w-[285px] lg:min-w-[22.7vw] w-0 px-10 p-10 flex flex-col justify-end rounded-3xl"
                 variants={fadeIn}
               >
-                <Link href={"/use-cases"} className=" group text-[1.4vw] flex flex-row">
+                <Link href={"/use-cases"} className=" group lg:text-[1.4vw] flex flex-row">
                   See why global <br /> innovators choose us
-                  <ChevronRight className="size-[2vw] stroke-[1.5] relative top-[2.2vw] group-hover:translate-x-3 transition-all duration-500" />
+                  <ChevronRight className=" size-6 lg:size-[2vw] stroke-[1.5] relative top-6 lg:top-[2.2vw] group-hover:translate-x-3 transition-all duration-500" />
                 </Link>
               </motion.div>
 
@@ -262,7 +262,7 @@ export default function Home() {
 
           {/* CLAIMS */}
           <motion.div
-            className=" h-2/3 md:h-88 w-full flex flex-col md:flex-row gap-10 md:gap-0 justify-between px-10 py-16 md:py-0 items-start md:items-center text-white"
+            className=" h-2/3 lg:h-88 w-full flex flex-col lg:flex-row gap-10 lg:gap-0 justify-between px-10 py-16 lg:py-0 items-start lg:items-center text-white"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -270,43 +270,43 @@ export default function Home() {
           >
             {/* TRUSTED WORLDWIDE */}
             <motion.div
-              className="flex flex-col items-start gap-2 md:gap-5"
+              className="flex flex-col items-start gap-2 lg:gap-5"
               variants={fadeIn}
             >
-              <div className=" text-4xl md:text-5xl max-w-[200px] ">
+              <div className=" text-4xl lg:text-5xl max-w-[200px] ">
                 Trusted Worldwide
               </div>
-              <div className="font-thin text-sm md:text-base max-w-[250px]">
+              <div className="font-thin text-sm lg:text-base max-w-[250px]">
                 From marketplace to media, AI moderation you can rely on.
               </div>
             </motion.div>
 
             <motion.div
-              className="flex flex-col items-start gap-2 md:gap-5"
+              className="flex flex-col items-start gap-2 lg:gap-5"
               variants={fadeIn}
             >
-              <div className=" text-4xl md:text-5xl max-w-[200px] ">99.8%</div>
-              <div className="font-thin text-sm md:text-base max-w-[250px]">
+              <div className=" text-4xl lg:text-5xl max-w-[200px] ">99.8%</div>
+              <div className="font-thin text-sm lg:text-base max-w-[250px]">
                 Detection Accuracy
               </div>
             </motion.div>
 
             <motion.div
-              className="flex flex-col items-start gap-2 md:gap-5"
+              className="flex flex-col items-start gap-2 lg:gap-5"
               variants={fadeIn}
             >
-              <div className=" text-4xl md:text-5xl max-w-[200px] ">85%</div>
-              <div className="font-thin text-sm md:text-base max-w-[250px]">
+              <div className=" text-4xl lg:text-5xl max-w-[200px] ">85%</div>
+              <div className="font-thin text-sm lg:text-base max-w-[250px]">
                 Cost Reduction
               </div>
             </motion.div>
 
             <motion.div
-              className="flex flex-col items-start gap-2 md:gap-5"
+              className="flex flex-col items-start gap-2 lg:gap-5"
               variants={fadeIn}
             >
-              <div className=" text-4xl md:text-5xl max-w-[200px] ">24/7</div>
-              <div className="font-thin text-sm md:text-base max-w-[250px]">
+              <div className=" text-4xl lg:text-5xl max-w-[200px] ">24/7</div>
+              <div className="font-thin text-sm lg:text-base max-w-[250px]">
                 Automated Monitoring
               </div>
             </motion.div>
@@ -314,7 +314,7 @@ export default function Home() {
 
           {/* Complete AI safety platform */}
           <motion.div
-            className=" h-[111vh] md:h-[130vh] py-16 md:py-0 px-4 flex flex-col relative md:justify-center gap-7 text-white"
+            className=" h-[111vh] lg:h-[130vh] py-16 lg:py-0 px-4 flex flex-col relative lg:justify-center gap-7 text-white"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
@@ -322,7 +322,7 @@ export default function Home() {
           >
 
             {/* background round dots + gradient */}
-            <div className=" -z-10 bg-gradient-to-b from-transparent to-[#1A1DD8]/80 absolute h-[110vh]  md:h-[130vh] w-screen -left-15 overflow-hidden">
+            <div className=" -z-10 bg-gradient-to-b from-transparent to-[#1A1DD8]/80 absolute h-[110vh]  lg:h-[130vh] w-screen lg:-left-15 overflow-hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 version="1.1"
@@ -359,13 +359,13 @@ export default function Home() {
             </div>
 
             <motion.div
-              className=" text-[40px] leading-12 md:leading-18 md:text-7xl md:max-w-2/5 "
+              className=" text-[40px] leading-12 lg:leading-18 lg:text-7xl lg:max-w-2/5 "
               variants={fadeIn}
             >
               Features that Powers Trust
             </motion.div>
             <motion.div
-              className="md:max-w-4/9 font-thin text-sm tracking-wider"
+              className="lg:max-w-4/9 font-thin text-sm tracking-wider"
               variants={fadeIn}
             >
               From monitoring to compliance, our platform provides everything you
@@ -406,7 +406,7 @@ export default function Home() {
                       top: top,
                       left: left,
                     }}
-                    className=" md:absolute w-80 md:w-88 flex items-center justify-center text-white backdrop-blur-xs rounded-full"
+                    className=" lg:absolute w-80 lg:w-88 flex items-center justify-center text-white backdrop-blur-xs rounded-full"
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: idx * 0.15 }}
@@ -414,9 +414,9 @@ export default function Home() {
                   >
                     <div className="w-2/3 h-full absolute border-t border-l rounded-bl-full rounded-tl-full top-0 left-0 " />
                     <div className="w-2/3 h-full absolute border-b border-r rounded-tr-full rounded-br-full top-0  right-0 " />
-                    <div className=" px-6 py-5 md:p-10 w-full flex items-center justify-start gap-5 rounded-full">
+                    <div className=" px-6 py-5 lg:p-10 w-full flex items-center justify-start gap-5 rounded-full">
                       {val.icon}
-                      <span className=" text-base md:text-xl font-thin">
+                      <span className=" text-base lg:text-xl font-thin">
                         {val.title}
                       </span>
                     </div>
@@ -428,17 +428,17 @@ export default function Home() {
 
           {/* PROVEN RESULTS */}
           <motion.div
-            className=" text-white bg-black h-screen px-5 md:px-10 py-10 md:py-24 flex flex-col gap-5 md:gap-14"
+            className=" text-white bg-black h-screen px-5 lg:px-10 py-10 lg:py-24 flex flex-col gap-5 lg:gap-14"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={staggerContainer}
           >
-            <motion.div className=" text-base font-thin md:text-2xl " variants={fadeIn}>
+            <motion.div className=" text-base font-thin lg:text-2xl " variants={fadeIn}>
               Recognized on the World Stage
             </motion.div>
             <motion.div
-              className=" text-3xl/relaxed md:text-5xl/normal text-balance  "
+              className=" text-3xl/relaxed lg:text-5xl/normal text-balance  "
               variants={fadeIn}
             >
               From global AI forums to Trust & Safety summits, Contrails AI is
@@ -446,11 +446,11 @@ export default function Home() {
             </motion.div>
             {/* images */}
             <motion.div
-              className=" w-full max-w-[100vw] md:h-52 flex flex-row flex-wrap  items-center justify-between"
+              className=" w-full max-w-[100vw] lg:h-52 flex flex-row flex-wrap  items-center justify-between"
               variants={staggerContainer}
             >
               <motion.div
-                className="relative w-[150px] h-[100px] md:w-[180px] md:h-[120px] "
+                className="relative w-[150px] h-[100px] lg:w-[180px] lg:h-[120px] "
                 variants={fadeIn}
               >
                 <Image
@@ -461,7 +461,7 @@ export default function Home() {
                 />
               </motion.div>
               <motion.div
-                className="relative w-[150px] h-[100px] md:w-[180px] md:h-[120px] "
+                className="relative w-[150px] h-[100px] lg:w-[180px] lg:h-[120px] "
                 variants={fadeIn}
               >
                 <Image
@@ -472,7 +472,7 @@ export default function Home() {
                 />
               </motion.div>
               <motion.div
-                className="relative w-[150px] h-[100px] md:w-[180px] md:h-[120px] "
+                className="relative w-[150px] h-[100px] lg:w-[180px] lg:h-[120px] "
                 variants={fadeIn}
               >
                 <Image
@@ -483,7 +483,7 @@ export default function Home() {
                 />
               </motion.div>
               <motion.div
-                className="relative w-[150px] h-[100px] md:w-[180px] md:h-[120px] "
+                className="relative w-[150px] h-[100px] lg:w-[180px] lg:h-[120px] "
                 variants={fadeIn}
               >
                 <Image
@@ -494,7 +494,7 @@ export default function Home() {
                 />
               </motion.div>
               <motion.div
-                className="relative w-[150px] h-[100px] md:w-[180px] md:h-[120px] "
+                className="relative w-[150px] h-[100px] lg:w-[180px] lg:h-[120px] "
                 variants={fadeIn}
               >
                 <Image
@@ -508,65 +508,65 @@ export default function Home() {
           </motion.div>
 
           {/* Dont let AI Compomise business */}
-          <div className="h-[150vh] md:h-[125vh] w-full relative flex items-center md:justify-center ">
-            <div className="absolute bg-[#0a0e0e] h-[125vh] w-[100vw] top-0 md:-left-15 -z-10 " />
+          <div className="h-[150vh] lg:h-[125vh] w-full relative flex items-center lg:justify-center ">
+            <div className="absolute bg-[#0a0e0e] h-[125vh] w-[100vw] top-0 lg:-left-15 -z-10 " />
 
             <motion.div
-              className="z-10 relative top-0 flex flex-col md:flex-row items-center justify-start md:justify-center h-full py-20  md:items-center gap-10 text-white w-full "
+              className="z-10 relative top-0 flex flex-col lg:flex-row items-center justify-start lg:justify-center h-full py-20  lg:items-center gap-10 text-white w-full "
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={staggerContainer}
             >
               <motion.div
-                className=" flex flex-col gap-5 max-w-screen md:max-w-[40vw] w-full h-full md:h-fit px-5 md:px-9 "
+                className=" flex flex-col gap-5 max-w-screen lg:max-w-[40vw] w-full h-full lg:h-fit px-5 lg:px-9 "
                 variants={fadeIn}
               >
-                <div className=" text-3xl md:text-[68px] md:leading-19  ">
+                <div className=" text-3xl lg:text-[68px] lg:leading-19  ">
                   {" "}
                   Safeguard Your Digital Content with Enterprise- Grade AI Safety{" "}
                 </div>
-                {/* <div className="md:w-2/3 text-sm/relaxed">
+                {/* <div className="lg:w-2/3 text-sm/relaxed">
                   Talk to us and discover the fastest path to trusted content
                   moderation.
                 </div> */}
               </motion.div>
 
               <motion.div
-                className=" px-5 flex flex-row md:flex-col flex-wrap justify-between h-full w-full md:h-[35rem] md:w-[45rem] gap-[1px] text-black "
+                className=" px-5 flex flex-row lg:flex-col flex-wrap justify-between h-full w-full lg:h-[35rem] lg:w-[45rem] gap-[1px] text-black "
                 variants={staggerContainer}
               >
                 {/* deploy in 30 mins */}
                 <motion.div
-                  className=" h-52 md:h-full w-full md:w-1/2 flex flex-col justify-between bg-white px-10 py-10 md:py-16 rounded-3xl"
+                  className=" h-52 lg:h-full w-full lg:w-1/2 flex flex-col justify-between bg-white px-10 py-10 lg:py-16 rounded-3xl"
                   variants={fadeIn}
                 >
-                  <div className=" text-xl md:text-3xl">
-                    Deploy in <br className="hidden md:block" /> 30 minutes
+                  <div className=" text-xl lg:text-3xl">
+                    Deploy in <br className="hidden lg:block" /> 30 minutes
                   </div>
                   <div className="text-xl font-thin">
-                    Simple SDK <br className="hidden md:block" /> integration
-                    with <br className="hidden md:block" /> existing systems
+                    Simple SDK <br className="hidden lg:block" /> integration
+                    with <br className="hidden lg:block" /> existing systems
                   </div>
-                  <Rocket className=" hidden md:block size-18 stroke-[1.5] stroke-[#DF6501]" />
+                  <Rocket className=" hidden lg:block size-18 stroke-[1.5] stroke-[#DF6501]" />
                 </motion.div>
                 <motion.div
-                  className=" h-52 md:h-[50%] w-full md:w-1/2 flex flex-col justify-between bg-white px-10 py-10 md:py-16 rounded-3xl"
+                  className=" h-52 lg:h-[50%] w-full lg:w-1/2 flex flex-col justify-between bg-white px-10 py-10 lg:py-16 rounded-3xl"
                   variants={fadeIn}
                 >
-                  <div className=" text-xl md:text-3xl">
-                    Enterprise <br className="hidden md:block" /> Security
+                  <div className=" text-xl lg:text-3xl">
+                    Enterprise <br className="hidden lg:block" /> Security
                   </div>
                   <div className="text-xl font-thin">
                     SOC2 certified with bank grade encryption
                   </div>
                 </motion.div>
                 <motion.div
-                  className=" h-52 md:h-[49.8%] w-full md:w-1/2 flex flex-col justify-between bg-white px-10 py-10 md:py-16 rounded-3xl"
+                  className=" h-52 lg:h-[49.8%] w-full lg:w-1/2 flex flex-col justify-between bg-white px-10 py-10 lg:py-16 rounded-3xl"
                   variants={fadeIn}
                 >
-                  <div className=" text-xl md:text-3xl">
-                    24/7 Expert <br className="hidden md:block" /> Support
+                  <div className=" text-xl lg:text-3xl">
+                    24/7 Expert <br className="hidden lg:block" /> Support
                   </div>
                   <div className="text-xl font-thin">
                     Dedicated team for enterprise customers

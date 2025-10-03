@@ -20,8 +20,8 @@ const Footer = () => {
                     <Link className=" cursor-pointer hover:text-gray-100 " href={"/about"}>About</Link>
                     <Link className=" cursor-pointer hover:text-gray-100 " href={"/contact"}>Contact</Link>
 
-                    <Link className=" cursor-pointer hover:text-gray-100 " href={"/privacy-policy"}>Privacy Policy</Link>
-                    <Link className=" cursor-pointer hover:text-gray-100 " href={"/terms-n-conditions"}>Terms & conditions</Link>
+                    <Link className=" cursor-pointer hover:text-gray-100 " href={"/"}>Privacy Policy</Link>
+                    {/* <Link className=" cursor-pointer hover:text-gray-100 " href={"/terms-n-conditions"}>Terms & conditions</Link> */}
                 </div>
             </div>
 

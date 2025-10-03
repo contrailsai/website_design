@@ -1,11 +1,14 @@
 import { Space_Grotesk } from "next/font/google";
+import Script from 'next/script';
 import "./globals.css";
+
+import Analytics from "@/components/Analytics";
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Contrails AI - AI Solutions for Digital Content Safety ",
-  description: "Contrails AI provides solutions to detect manipulated media, misinformation, and harmful content. Protect your digital ecosystem with our advanced AI technology.",
+  title: "Contrails AI | AI-First Trust & Safety Solution for the Generative Era ",
+  description: "Safeguard your brand with multi-modal AI that detects deepfakes, harmful content, and misinformation across formats.",
   keywords: "AI, digital security, media verification, misinformation detection, content moderation, artificial intelligence, deepfake detection",
   authors: [{ name: "Contrails AI" }],
   creator: "Contrails AI",
@@ -15,21 +18,21 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://contrails.ai'),
+  metadataBase: new URL('https://www.contrails.ai'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: "Contrails AI - AI Solutions for Digital Content Safety ",
-    description: "Contrails AI provides solutions to detect manipulated media, misinformation, and harmful content. Protect your digital ecosystem with our advanced AI technology.",
-    url: 'https://contrails.ai',
+    title: "Contrails AI | AI-First Trust & Safety Solution for the Generative Era ",
+    description: "Safeguard your brand with multi-modal AI that detects deepfakes, harmful content, and misinformation across formats.",
+    url: 'https://www.contrails.ai',
     siteName: 'Contrails AI',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Contrails AI - Digital Content Safety Solutions',
+        alt: 'Contrails AI | AI-First Trust & Safety Solution for the Generative Era',
       },
     ],
     locale: 'en_US',
@@ -37,8 +40,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Contrails AI - AI Solutions for Digital Content Safety ",
-    description: "Contrails AI provides solutions to detect manipulated media, misinformation, and harmful content. Protect your digital ecosystem with our advanced AI technology.",
+    title: "Contrails AI | AI-First Trust & Safety Solution for the Generative Era",
+    description: "Safeguard your brand with multi-modal AI that detects deepfakes, harmful content, and misinformation across formats.",
     images: ['/og-image.png'],
     creator: '@contrailsai',
   },
@@ -77,10 +80,27 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
+          `,
+        }}
+      />
       <body
         className={` bg-black ${spaceGrotesk.className} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );

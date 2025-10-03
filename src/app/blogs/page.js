@@ -17,6 +17,52 @@ import Blogs_hero from "./Blogs_hero";
 //     status?: string;
 // }
 
+export const metadata = {
+    title: 'AI Trust & Safety Blog | Insights on Detection & Moderation',
+    description: 'Get the latest updates on AI-powered moderation, deepfake detection, compliance, and trust for digital communities worldwide.',
+    keywords: 'digital security, AI protection, online safety, trust technology, multimodal AI, cybersecurity, digital trust, safe online communities',
+    authors: [{ name: 'Contrails AI' }],
+    creator: 'Contrails AI',
+    publisher: 'Contrails AI',
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
+    openGraph: {
+        type: 'website',
+        locale: 'en_US',
+        url: 'https://contrails.ai/blogs',
+        title: 'AI Trust & Safety Blog | Insights on Detection & Moderation',
+        description: 'Get the latest updates on AI-powered moderation, deepfake detection, compliance, and trust for digital communities worldwide.',
+        siteName: 'Contrails AI',
+        images: [
+            {
+                url: '/og-image.png', // Replace with your actual image
+                width: 1200,
+                height: 630,
+                alt: 'AI Trust & Safety Blog | Insights on Detection & Moderation',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'AI Trust & Safety Blog | Insights on Detection & Moderation',
+        description: 'Get the latest updates on AI-powered moderation, deepfake detection, compliance, and trust for digital communities worldwide.',
+        creator: '@Contrails AI', // Replace with your Twitter handle
+        images: ['/og-image.png'], // Replace with your actual image
+    },
+    alternates: {
+        canonical: 'https://contrails.ai/about',
+    },
+};
+
 const BlogsPage = async () => {
     const headersList = await headers();
     const host = headersList.get('host');

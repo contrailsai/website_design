@@ -1,8 +1,8 @@
 import PageUI from "./Ui";
 
 export const metadata = {
-    title: 'About Us | Contrails AI',
-    description: 'Learn about our vision to shape a world where trust is the foundation of every digital connection. We harness multimodal AI to protect digital lives and create safe online spaces.',
+    title: 'About Contrails AI: AI Safety and Governance Team',
+    description: 'Contrails AI bridges technology and policy to deliver AI trust & safety solutions for content moderation, fraud prevention, and compliance.',
     keywords: 'digital security, AI protection, online safety, trust technology, multimodal AI, cybersecurity, digital trust, safe online communities',
     authors: [{ name: 'Contrails AI' }],
     creator: 'Contrails AI',
@@ -22,22 +22,22 @@ export const metadata = {
         type: 'website',
         locale: 'en_US',
         url: 'https://contrails.ai/about',
-        title: 'About Us - Digital Trust & AI Security Solutions | Contrails AI',
-        description: 'Discover how we\'re building tomorrow\'s digital trust through AI-powered security solutions that protect and empower human connections.',
+        title: 'About Contrails AI: AI Safety and Governance Team',
+        description: 'Contrails AI bridges technology and policy to deliver AI trust & safety solutions for content moderation, fraud prevention, and compliance.',
         siteName: 'Contrails AI',
         images: [
             {
                 url: '/og-image.png', // Replace with your actual image
                 width: 1200,
                 height: 630,
-                alt: 'About Contrails AI - Digital Security and AI Solutions',
+                alt: 'About Contrails AI: AI Safety and Governance Team',
             },
         ],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'About Us | Contrails AI - Digital Trust & AI Security Solutions',
-        description: 'Learn about our mission to create safe digital spaces where trust is unshakable and communities can thrive without fear.',
+        title: 'About Contrails AI: AI Safety and Governance Team',
+        description: 'Contrails AI bridges technology and policy to deliver AI trust & safety solutions for content moderation, fraud prevention, and compliance.',
         creator: '@Contrails AI', // Replace with your Twitter handle
         images: ['/og-image.png'], // Replace with your actual image
     },
