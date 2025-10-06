@@ -92,7 +92,7 @@ const Navbar = () => {
                 {/* Book a Demo Button */}
                 <motion.div
                     variants={navItemVariants}
-                    className="bg-orange-500 w-fit px-4 py-2 text-xl rounded-lg text-white font-semibold cursor-pointer flex "
+                    className=" bg-white text-black hover:bg-orange-500 hover:text-white transition-all duration-200 w-fit px-4 py-2 text-xl rounded-lg font-semibold cursor-pointer flex "
                     // variants={fadeInUp}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -101,7 +101,7 @@ const Navbar = () => {
                     <Link
                         href={"https://cal.com/ami-contrails/30min"}
                         target="_blank"
-                        className="w-fit h-fit text-white rounded-lg text-sm font-semibold cursor-pointer "
+                        className="w-fit h-fit rounded-lg text-sm font-semibold cursor-pointer "
                     >
                         Book a Demo
                     </Link>

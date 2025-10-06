@@ -2,9 +2,10 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { motion } from "framer-motion"; // Import framer-motion
+import { AnimatePresence, motion } from "framer-motion"; // Import framer-motion
 
 import { write_message_to_slack } from "@/lib/slack_funcitons";
+import { useEffect, useState } from "react";
 
 // A subtle animation for elements to fade and slide in from below
 const fadeInUp = {
@@ -32,8 +33,21 @@ const staggerContainer = {
 
 const UI_page = () => {
 
+    const [show_popup, set_show_popup] = useState(false);
+
+    useEffect(() => {
+
+        if (show_popup == true) {
+            setTimeout(() => {
+                set_show_popup(false)
+            }, 10000);
+        }
+
+    }, [show_popup])
+
     const handle_submit = async (e) => {
         e.preventDefault();
+        set_show_popup(true);
 
         const name = e.target[0].value;
         const email = e.target[1].value;
@@ -150,6 +164,22 @@ MESSAGE: ${message},\n
                         </motion.div> */}
                     </motion.div>
                 </div>
+
+                {
+                    <AnimatePresence>
+                        {show_popup && (
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -20 }}
+                                transition={{ duration: 0.3, ease: "easeOut" }}
+                                className="fixed md:h-24 max-w-96 flex items-center p-5 rounded-2xl text-white font-thin bg-blue-800/70 backdrop-blur z-40 top-10/12 right-[2vw]"
+                            >
+                                Thank you for reaching out! We will get back to you shortly.
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
+                }
             </div>
             <Footer />
         </>

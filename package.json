@@ -9,11 +9,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "framer-motion": "^12.23.22",
-    "lucide-react": "^0.544.0",
-    "next": "15.5.3",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
     "@supabase/supabase-js": "^2.55.0",
     "@tiptap/extension-blockquote": "^3.1.0",
     "@tiptap/extension-code-block": "^3.1.0",
@@ -21,12 +16,19 @@
     "@tiptap/extension-link": "^3.1.0",
     "@tiptap/extension-text-align": "^3.1.0",
     "@tiptap/react": "^3.1.0",
-    "@tiptap/starter-kit": "^3.1.0"
+    "@tiptap/starter-kit": "^3.1.0",
+    "framer-motion": "^12.23.22",
+    "lucide-react": "^0.544.0",
+    "motion": "^12.23.22",
+    "next": "15.5.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/postcss": "^4",
+    "@tailwindcss/typography": "^0.5.16",
     "@types/node": "24.6.0",
     "@types/react": "19.1.16",
     "eslint": "^9",

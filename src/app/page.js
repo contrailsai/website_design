@@ -7,6 +7,7 @@ import { Cpu, Minimize, Zap, ChartPie, Blocks, Rocket, ChevronRight } from "luci
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import TextGenerateEffect from "@/components/TextGenerateEffect";
 
 // Animation Variants (reusable animation definitions)
 const fadeIn = {
@@ -132,7 +133,9 @@ export default function Home() {
                     variants={fadeIn}
                   >
                     GenAI Content Governance and Intelligence Across
-                    <span className="text-[#DF6501] font-semibold ml-3">VIDEO</span>
+
+                    <TextGenerateEffect words={["Video", "Audio", "Text", "Images"]} textClassName={"text-[#DF6501] font-semibold "} />
+                    {/* <span className="text-[#DF6501] font-semibold ml-3">VIDEO</span> */}
                   </motion.div>
                   <motion.div
                     className=" text-base leading-7 text-left font-light max-w-md"
@@ -149,7 +152,7 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                     whileTap={{ scale: 0.98 }}
-                    className="text-white bg-[#DF6501] lg:min-w-56 min-h-10 w-fit py-2 px-4 lg:px-6 flex items-center justify-between gap-4 rounded-lg cursor-pointer relative overflow-hidden group"
+                    className="bg-white text-black hover:text-white hover:bg-[#DF6501] transition-all duration-300 lg:min-w-56 min-h-10 w-fit py-2 px-4 lg:px-6 flex items-center justify-between gap-4 rounded-lg cursor-pointer relative overflow-hidden group"
                   >
                     <span className="lg:text-xl z-10">
                       Book a Demo
