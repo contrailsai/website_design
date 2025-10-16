@@ -36,17 +36,25 @@ const staggerContainer = {
 const UI_page = () => {
 
     const [submitted, set_submitted] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState(null);
 
     const handle_submit = async (e) => {
         e.preventDefault();
+        setIsLoading(true); // Set loading state
+        setError(null); // Clear previous errors
 
-        const name = e.target[0].value;
-        const email = e.target[1].value;
-        const company = e.target[2].value;
-        const message = e.target[3].value;
-        console.log(name, email, company, message)
+        // 2. Use FormData for robust and safe access to form values
+        const formData = new FormData(e.target);
+        const name = formData.get("fullName");
+        const email = formData.get("workEmail");
+        const company = formData.get("companyName");
+        const message = formData.get("message");
+
+        console.log(name, email, company, message);
 
         const data = `
+        <-- CONTACT FORM SUBMISSION -->\n
 NAME: ${name},\n
 EMAIL: ${email},\n
 COMPANY: ${company},\n
@@ -55,12 +63,17 @@ MESSAGE: ${message},\n
 
         try {
             const resp = await write_message_to_slack(data);
-            if (!resp.success)
-                throw `failure- ${resp.error} `
+            if (!resp.success) {
+                // Throw an error that we can catch and display to the user
+                throw new Error(resp.error || "An unknown error occurred.");
+                }
             set_submitted(true);
         }
         catch (e) {
-            console.error(`Error: ${e}`)
+            // console.error(`Submission Error: ${e.message}`);
+            setError("Sorry, something went wrong. Please try again.");
+        } finally {
+            setIsLoading(false); // Stop loading state regardless of outcome
         }
     }
 
@@ -129,29 +142,38 @@ MESSAGE: ${message},\n
                                             </motion.div>
                                             <form onSubmit={handle_submit} className="flex flex-col gap-5 md:max-w-[450px]">
                                                 <motion.div className="flex flex-col gap-2" variants={fadeInUp}>
-                                                    <label>Full Name</label>
-                                                    <input className=" px-3 py-2 rounded-lg border border-gray-400 " placeholder="Enter Full Name" />
+                                                    <label htmlFor="fullName">Full Name</label>
+                                                    <input id="fullName" name="fullName" className=" px-3 py-2 rounded-lg border border-gray-400 " placeholder="Enter Full Name" required />
                                                 </motion.div>
                                                 <motion.div className="flex flex-col gap-2" variants={fadeInUp}>
-                                                    <label>Work Email</label>
-                                                    <input className=" px-3 py-2 rounded-lg border border-gray-400 " type="email" placeholder="Enter Work Email" />
+                                                    <label htmlFor="workEmail">Work Email</label>
+                                                    <input id="workEmail" name="workEmail" className=" px-3 py-2 rounded-lg border border-gray-400 " type="email" placeholder="Enter Work Email" required />
                                                 </motion.div>
                                                 <motion.div className="flex flex-col gap-2" variants={fadeInUp}>
-                                                    <label>Company Name</label>
-                                                    <input className=" px-3 py-2 rounded-lg border border-gray-400 " placeholder="Enter Company Name" />
+                                                    <label htmlFor="companyName">Company Name</label>
+                                                    <input id="companyName" name="companyName" className=" px-3 py-2 rounded-lg border border-gray-400 " placeholder="Enter Company Name" required />
                                                 </motion.div>
                                                 <motion.div className="flex flex-col gap-2" variants={fadeInUp}>
-                                                    <label>Message</label>
-                                                    <textarea rows={5} className=" px-3 py-2 rounded-lg border border-gray-400 " placeholder="Enter Your Message" />
+                                                    <label htmlFor="message">Message</label>
+                                                    <textarea id="message" name="message" rows={5} className=" px-3 py-2 rounded-lg border border-gray-400 " placeholder="Enter Your Message" />
                                                 </motion.div>
+
+                                                {/* Show error message to user if submission fails */}
+                                                {error && (
+                                                    <div className="text-red-600 bg-red-100 p-3 rounded-lg text-center transition-all">
+                                                        {error}
+                                                    </div>
+                                                )}
+
                                                 <motion.button
-                                                    className="bg-orange-500 w-fit px-4 py-2 text-xl rounded-lg text-white font-semibold cursor-pointer"
+                                                    className="bg-orange-500 w-fit px-4 py-2 mt-5 text-xl rounded-lg text-white cursor-pointer disabled:bg-gray-400 disabled:cursor-not-allowed"
                                                     variants={fadeInUp}
                                                     whileHover={{ scale: 1.05 }}
                                                     whileTap={{ scale: 0.95 }}
                                                     type="submit"
+                                                    disabled={isLoading} // Disable button while loading
                                                 >
-                                                    Submit
+                                                    {isLoading ? "Submitting..." : "Submit"}
                                                 </motion.button>
                                             </form>
                                         </motion.div>
