@@ -21,7 +21,7 @@ export const metadata = {
     openGraph: {
         type: 'website',
         locale: 'en_US',
-        url: 'https://contrails.ai/use-cases',
+        url: 'https://contrails.ai/sb_53',
         title: 'Contrails AI Protects Digital Trust Across All Interactions',
         description: 'Learn more about our enterprise AI safety solution that is built to protect digital trust across commerce, content platforms, and global online communities.',
         siteName: 'Contrails AI',
@@ -42,7 +42,7 @@ export const metadata = {
         images: ['/og-image.png'], // Replace with your actual image
     },
     alternates: {
-        canonical: 'https://contrails.ai/use-cases',
+        canonical: 'https://contrails.ai/sb_53',
     },
 };
 
