@@ -210,7 +210,6 @@ MESSAGE: ${message},\n
             </div>
             <Footer />
         </>
-
     )
 }
 

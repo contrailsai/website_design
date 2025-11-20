@@ -41,11 +41,18 @@
   </url>
   
   <!-- Privacy Policy -->
-  <!-- <url>
+  <url>
     <loc>https://contrails.ai/privacy-policy</loc>
     <lastmod>2025-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url> -->
+  </url>
+
+  <url>
+    <loc>https://contrails.ai/terms-of-use</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
   
 </urlset> 
