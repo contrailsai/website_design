@@ -16,7 +16,7 @@ const Footer = () => {
                 <div className="flex flex-col md:flex-row gap-4 md:gap-8">
 
                     <Link className=" cursor-pointer hover:text-gray-100 " href={"/use-cases"}>Use Cases</Link>
-                    <Link className=" cursor-pointer hover:text-gray-100 " href={"/blogs"}>Blog</Link>
+                    <Link className=" cursor-pointer hover:text-gray-100 " href={"/blogs"}>Blogs</Link>
                     <Link className=" cursor-pointer hover:text-gray-100 " href={"/about"}>About</Link>
                     <Link className=" cursor-pointer hover:text-gray-100 " href={"/contact"}>Contact</Link>
 
