@@ -148,7 +148,7 @@ export default function BlogContent({ blog }) {
                                prose-blockquote:border-l-4 prose-blockquote:border-gray-200 prose-blockquote:pl-4 prose-blockquote:text-white 
                                prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-white
                                prose-pre:bg-gray-900 prose-pre:p-4 prose-pre:rounded-lg prose-pre:text-white
-                               prose-strong:font-semibold 
+                               prose-strong:font-semibold  prose-strong:text-white
                                prose-em:italic prose-em:text-white "
                     dangerouslySetInnerHTML={{ __html: blog.content }}
                 />
