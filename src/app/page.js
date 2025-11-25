@@ -429,7 +429,7 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* PROVEN RESULTS */}
+          {/* Recognized on the World Stage */}
           <motion.div
             className=" text-white bg-black h-screen px-5 lg:px-10 py-10 lg:py-24 flex flex-col gap-5 lg:gap-14"
             initial="hidden"
@@ -510,8 +510,104 @@ export default function Home() {
             </motion.div>
           </motion.div>
 
-          {/* Dont let AI Compomise business */}
-          <div className="h-[150vh] lg:h-[125vh] w-full relative flex items-center lg:justify-center ">
+          {/* IN THE NEWS */}
+          <motion.div
+            className=" text-white h-[80vh] px-5 lg:px-3 py-6 flex items-center "
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={staggerContainer}
+          >
+
+            {/* <div className="bg-gradient-to-b from-black to-[#1A1DD8] absolute h-[80vh] w-screen -z-20 lg:-left-15" /> */}
+            <div className=' absolute lg:-left-15 bg-white  bg-[url(/30.svg)] w-screen h-[80vh] -z-20 '>
+              <div className=' bg-black/80 w-full h-full backdrop-invert '></div>
+            </div>
+
+            <div className="flex flex-col justify-center h-4/5 w-full gap-5 lg:gap-2 bg-black px-2 lg:px-7 py-4">
+              <motion.div
+                className=" text-3xl/relaxed lg:text-5xl/normal text-balance "
+                variants={fadeIn}
+              >
+                In The News
+              </motion.div>
+              <motion.div className=" text-base font-thin lg:text-2xl " variants={fadeIn}>
+                Explore how global media is covering our work on trust, safety, and synthetic media
+              </motion.div>
+              {/* images */}
+              <motion.div
+                className=" w-full max-w-[100vw] lg:h-80  flex flex-row flex-wrap  items-center justify-between"
+                variants={staggerContainer}
+              >
+                <motion.div
+                  className="relative w-[150px] h-[100px] lg:w-[240px] lg:h-[160px] p-2 bg-white flex items-center justify-center "
+                  variants={fadeIn}
+                >
+                  <Link
+                    href={"https://bizweekly.com/strengthening-trust-in-the-digital-world-the-contrails-ai-story/"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src={"/news_logos/Biz_Weekly.png"}
+                      width={600}
+                      height={400}
+                      alt="Biz_Weekly"
+                    />
+                  </Link>
+                </motion.div>
+                <motion.div
+                  className="relative w-[150px] h-[100px] lg:w-[240px] lg:h-[160px] p-2 bg-white flex items-center justify-center "
+                  variants={fadeIn}
+                >
+                  <Link
+                    href={"https://www.digitaljournal.com/pr/news/revupmarketer/contrails-ai-co-founder-ami-kumar-1703280217.html"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src={"/news_logos/Digital_Journal.png"}
+                      width={600}
+                      height={400}
+                      alt="Digital_Journal"
+                    />
+                  </Link>
+                </motion.div>
+                <motion.div
+                  className="relative w-[150px] h-[100px] lg:w-[240px] lg:h-[160px] p-2 bg-white flex items-center justify-center "
+                  variants={fadeIn}
+                >
+                  <Link href={"https://b2b.economictimes.indiatimes.com/amp/news/entrepreneur/contrails-ai-raises-1-million-in-pre-seed-funding-for-ai-driven-content-detection-platform/124363841"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src={"/news_logos/The_Economic_Times.svg"}
+                      width={600}
+                      height={400}
+                      alt="The_Economic_Times"
+                    />
+                  </Link>
+                </motion.div>
+                <motion.div
+                  className="relative w-[150px] h-[100px] lg:w-[240px] lg:h-[160px] p-2 bg-white flex items-center justify-center "
+                  variants={fadeIn}
+                >
+                  <Link href={"https://yourstory.com/2025/10/startup-news-and-updates-daily-roundup-october-7-2025#582266"} target="_blank" rel="noopener noreferrer">
+                    <Image
+                      src={"/news_logos/Your_Story.svg"}
+                      width={600}
+                      height={400}
+                      alt="YourStory"
+                    />
+                  </Link>
+                </motion.div>
+              </motion.div>
+            </div >
+          </motion.div >
+
+          {/* Safeguard Your Digital Content  */}
+          < div className="h-[150vh] lg:h-[125vh] w-full relative flex items-center lg:justify-center " >
             <div className="absolute bg-[#0a0e0e] h-[125vh] w-[100vw] top-0 lg:-left-15 -z-10 " />
 
             <motion.div
@@ -577,10 +673,10 @@ export default function Home() {
                 </motion.div>
               </motion.div>
             </motion.div>
-          </div>
+          </div >
 
-        </div>
-      </div>
+        </div >
+      </div >
       <CTA />
       <Footer />
     </>
