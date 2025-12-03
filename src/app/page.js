@@ -593,7 +593,7 @@ export default function Home() {
                   className="relative w-[150px] h-[100px] lg:w-[240px] lg:h-[160px] p-2 bg-white flex items-center justify-center "
                   variants={fadeIn}
                 >
-                  <Link href={"https://yourstory.com/2025/10/startup-news-and-updates-daily-roundup-october-7-2025#582266"} target="_blank" rel="noopener noreferrer">
+                  <Link href={"https://yourstory.com/2025/12/contrails-ai-raises-1-million-deepfake-detection-startup-bengaluru"} target="_blank" rel="noopener noreferrer">
                     <Image
                       src={"/news_logos/Your_Story.svg"}
                       width={600}
