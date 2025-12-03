@@ -544,6 +544,7 @@ export default function Home() {
                   variants={fadeIn}
                 >
                   <Link
+                    className="h-full w-full cursor-pointer"
                     href={"https://bizweekly.com/strengthening-trust-in-the-digital-world-the-contrails-ai-story/"}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -561,6 +562,7 @@ export default function Home() {
                   variants={fadeIn}
                 >
                   <Link
+                    className="h-full w-full cursor-pointer"
                     href={"https://www.digitaljournal.com/pr/news/revupmarketer/contrails-ai-co-founder-ami-kumar-1703280217.html"}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -577,7 +579,9 @@ export default function Home() {
                   className="relative w-[150px] h-[100px] lg:w-[240px] lg:h-[160px] p-2 bg-white flex items-center justify-center "
                   variants={fadeIn}
                 >
-                  <Link href={"https://b2b.economictimes.indiatimes.com/amp/news/entrepreneur/contrails-ai-raises-1-million-in-pre-seed-funding-for-ai-driven-content-detection-platform/124363841"}
+                  <Link 
+                    className="h-full w-full cursor-pointer"
+                    href={"https://b2b.economictimes.indiatimes.com/amp/news/entrepreneur/contrails-ai-raises-1-million-in-pre-seed-funding-for-ai-driven-content-detection-platform/124363841"}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -593,7 +597,10 @@ export default function Home() {
                   className="relative w-[150px] h-[100px] lg:w-[240px] lg:h-[160px] p-2 bg-white flex items-center justify-center "
                   variants={fadeIn}
                 >
-                  <Link href={"https://yourstory.com/2025/12/contrails-ai-raises-1-million-deepfake-detection-startup-bengaluru"} target="_blank" rel="noopener noreferrer">
+                  <Link 
+                      className="h-full w-full cursor-pointer"
+                      href={"https://yourstory.com/2025/12/contrails-ai-raises-1-million-deepfake-detection-startup-bengaluru"} target="_blank" rel="noopener noreferrer"
+                  >
                     <Image
                       src={"/news_logos/Your_Story.svg"}
                       width={600}
