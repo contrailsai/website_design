@@ -540,11 +540,11 @@ export default function Home() {
                 variants={staggerContainer}
               >
                 <motion.div
-                  className="relative w-[150px] h-[100px] lg:w-[240px] lg:h-[160px] p-2 bg-white flex items-center justify-center "
+                  className="relative w-[150px] h-[100px] lg:w-[240px] lg:h-[160px] p-2 bg-white "
                   variants={fadeIn}
                 >
                   <Link
-                    className="h-full w-full cursor-pointer"
+                    className="h-full w-full cursor-pointer flex items-center justify-center"
                     href={"https://bizweekly.com/strengthening-trust-in-the-digital-world-the-contrails-ai-story/"}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -558,11 +558,11 @@ export default function Home() {
                   </Link>
                 </motion.div>
                 <motion.div
-                  className="relative w-[150px] h-[100px] lg:w-[240px] lg:h-[160px] p-2 bg-white flex items-center justify-center "
+                  className="relative w-[150px] h-[100px] lg:w-[240px] lg:h-[160px] p-2 bg-white"
                   variants={fadeIn}
                 >
                   <Link
-                    className="h-full w-full cursor-pointer"
+                    className="h-full w-full cursor-pointer flex items-center justify-center"
                     href={"https://www.digitaljournal.com/pr/news/revupmarketer/contrails-ai-co-founder-ami-kumar-1703280217.html"}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -576,11 +576,11 @@ export default function Home() {
                   </Link>
                 </motion.div>
                 <motion.div
-                  className="relative w-[150px] h-[100px] lg:w-[240px] lg:h-[160px] p-2 bg-white flex items-center justify-center "
+                  className="relative w-[150px] h-[100px] lg:w-[240px] lg:h-[160px] p-2 bg-white  "
                   variants={fadeIn}
                 >
                   <Link 
-                    className="h-full w-full cursor-pointer"
+                    className="h-full w-full cursor-pointer flex items-center justify-center"
                     href={"https://b2b.economictimes.indiatimes.com/amp/news/entrepreneur/contrails-ai-raises-1-million-in-pre-seed-funding-for-ai-driven-content-detection-platform/124363841"}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -594,11 +594,11 @@ export default function Home() {
                   </Link>
                 </motion.div>
                 <motion.div
-                  className="relative w-[150px] h-[100px] lg:w-[240px] lg:h-[160px] p-2 bg-white flex items-center justify-center "
+                  className="relative w-[150px] h-[100px] lg:w-[240px] lg:h-[160px] p-2 bg-white "
                   variants={fadeIn}
                 >
                   <Link 
-                      className="h-full w-full cursor-pointer"
+                    className="h-full w-full cursor-pointer flex items-center justify-center"
                       href={"https://yourstory.com/2025/12/contrails-ai-raises-1-million-deepfake-detection-startup-bengaluru"} target="_blank" rel="noopener noreferrer"
                   >
                     <Image
